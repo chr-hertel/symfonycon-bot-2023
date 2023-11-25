@@ -1,0 +1,5 @@
+framework:
+    webhook:
+        routing:
+            telegram.update:
+                service: App\SymfonyConBot\Telegram\WebhookParser
