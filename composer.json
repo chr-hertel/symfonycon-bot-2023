@@ -1,20 +1,40 @@
 {
+    "name": "stoffel/symfonycon-bot-2023",
+    "description": "Chatbot for SymfonyCon 2023 with Telegram integration",
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.1",
+        "php": ">=8.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "symfony/console": "6.4.*",
-        "symfony/dotenv": "6.4.*",
-        "symfony/flex": "^2",
-        "symfony/framework-bundle": "6.4.*",
-        "symfony/runtime": "6.4.*",
-        "symfony/yaml": "6.4.*"
+        "doctrine/doctrine-bundle": "^2.11",
+        "doctrine/doctrine-migrations-bundle": "^3.3",
+        "doctrine/orm": "^2.17",
+        "phpdocumentor/reflection-docblock": "^5.3",
+        "phpstan/phpdoc-parser": "^1.24",
+        "symfony/console": "^7.0",
+        "symfony/dotenv": "^7.0",
+        "symfony/flex": "^2.4",
+        "symfony/framework-bundle": "^7.0",
+        "symfony/http-client": "7.0.*",
+        "symfony/messenger": "7.0.*",
+        "symfony/property-access": "7.0.*",
+        "symfony/property-info": "7.0.*",
+        "symfony/runtime": "^7.0",
+        "symfony/serializer": "7.0.*",
+        "symfony/webhook": "7.0.*",
+        "symfony/yaml": "^7.0"
     },
     "require-dev": {
+        "php-cs-fixer/shim": "^3.39",
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^10.4",
+        "symfony/debug-bundle": "7.0.*",
+        "symfony/monolog-bundle": "^3.0",
+        "symfony/stopwatch": "7.0.*",
+        "symfony/web-profiler-bundle": "7.0.*"
     },
     "config": {
         "allow-plugins": {
@@ -61,7 +81,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "6.4.*"
+            "require": "7.0.*"
         }
     }
 }
