@@ -18,7 +18,7 @@ final readonly class MessageStore
         $item = $this->cache->getItem('messages_'.$userId);
 
         if (!$item->isHit()) {
-            throw new MessageBagNotFoundException();
+            return new MessageBag();
         }
 
         return $item->get();
