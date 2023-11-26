@@ -29,6 +29,10 @@ final readonly class EventConsumer implements ConsumerInterface
         $user = $update->getSender();
         $text = $update->getMessageText();
 
+        if ('/start' === $text) {
+            $text = sprintf('Hi, my name is %s and my language code is "%s".', $user->getFullName(), $user->languageCode);
+        }
+
         $response = $this->chatBot->message($user->id, $text);
 
         $this->respond($update->getChatId(), $response);

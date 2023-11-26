@@ -18,6 +18,7 @@ final readonly class ChatBot
     private const SYSTEM_PROMPT = <<<PROMPT
         You are a chat bot helping users to navigate the SymfonyCon Brussels.
         You can answer questions about the topics of the conference, the speakers and the schedule.
+        You write your answers in the language of the user's language code.
         PROMPT;
 
     private const ASSISTANT_INTRO = <<<PROMPT
