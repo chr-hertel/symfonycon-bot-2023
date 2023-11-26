@@ -15,9 +15,6 @@ final class TimeSpan
         #[ORM\Column(type: 'datetime_immutable')]
         private \DateTimeImmutable $end,
     ) {
-        $this->start = $this->enforceParisTimeZone($this->start);
-        $this->end = $this->enforceParisTimeZone($this->end);
-
         if ($this->start > $this->end) {
             throw new \InvalidArgumentException('The time span needs to start before it ends.');
         }
@@ -25,21 +22,16 @@ final class TimeSpan
 
     public function getStart(): \DateTimeImmutable
     {
-        return $this->enforceParisTimeZone($this->start);
+        return $this->start;
     }
 
     public function getEnd(): \DateTimeImmutable
     {
-        return $this->enforceParisTimeZone($this->end);
+        return $this->end;
     }
 
     public function toString(): string
     {
-        return sprintf('%s - %s', $this->getStart()->format('M d: H:i'), $this->getEnd()->format('H:i'));
-    }
-
-    private function enforceParisTimeZone(\DateTimeImmutable $dateTime): \DateTimeImmutable
-    {
-        return $dateTime->setTimezone(new \DateTimeZone('Europe/Paris'));
+        return sprintf('%s - %s', $this->getStart()->format('M d Y: H:i'), $this->getEnd()->format('H:i'));
     }
 }

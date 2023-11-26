@@ -45,4 +45,9 @@ class Event
     {
         return $this->slot;
     }
+
+    public function toString(): string
+    {
+        return sprintf('Time span: %s - Event: %s', $this->getTimeSpan()->toString(), $this->getTitle());
+    }
 }

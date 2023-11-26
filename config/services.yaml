@@ -12,8 +12,18 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
+    App\SymfonyConBot\OpenAI\Client:
+        $apiKey: '%env(OPENAI_TOKEN)%'
+
+    App\SymfonyConBot\Schedule\VectorStore:
+        $index: 'symfonycon-bot-2023'
+
     App\SymfonyConBot\Telegram\Client:
         $baseUrl: '%env(WEBHOOK_BASE_URL)%'
         $token: '%env(TELEGRAM_TOKEN)%'
+
+    Probots\Pinecone\Client:
+        $apiKey: '%env(PINECONE_API_KEY)%'
+        $environment: '%env(PINECONE_ENVIRONMENT)%'
 
     Symfony\Component\Dotenv\Command\DotenvDumpCommand: ~

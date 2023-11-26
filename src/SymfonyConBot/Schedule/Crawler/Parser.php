@@ -17,12 +17,12 @@ final readonly class Parser
 {
     private const TRACKS = [
         '0' => Track::SymfonyRoom,
-        '1' => Track::FrameworkRoom,
+        '1' => Track::SensioLabsRoom,
         '2' => Track::PlatformRoom,
     ];
 
     public function __construct(
-        private LoggerInterface $logger = new NullLogger()
+        private LoggerInterface $logger = new NullLogger(),
     ) {
     }
 

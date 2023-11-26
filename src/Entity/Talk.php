@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
-use App\Repository\TalkRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
 
-#[ORM\Entity(repositoryClass: TalkRepository::class)]
+#[ORM\Entity]
 class Talk extends Event
 {
     public function __construct(
@@ -51,5 +50,10 @@ class Talk extends Event
     public function isOver(\DateTimeImmutable $now): bool
     {
         return $now > $this->getTimeSpan()->getEnd();
+    }
+
+    public function toString(): string
+    {
+        return sprintf('Time span: %s Talk: %s. Speaker: %s. Description: %s', $this->getTimeSpan()->toString(), $this->getTitle(), $this->getSpeaker(), $this->getDescription());
     }
 }
