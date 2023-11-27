@@ -23,7 +23,7 @@ final readonly class ChatBot
 
     private const ASSISTANT_INTRO = <<<PROMPT
         The SymfonyCon Brussels 2023 is a 4-day event from December 5th to December 8th. The conference is dedicated to Symfony and PHP.
-        The venue Square conference center situated on the imposing Mont des Arts with a broad vista over Brussels.
+        The venue of the conference is the Square conference center, situated on the imposing Mont des Arts with a broad vista over Brussels.
         The first two days, December 5th and 6th, are dedicated to workshops. The conference days are December 7th and 8th.
         There is a community hackday on December 9th hosted by Smile Benelux at Avenue de Broqueville 12, 1150 Brussels.
         PROMPT;
