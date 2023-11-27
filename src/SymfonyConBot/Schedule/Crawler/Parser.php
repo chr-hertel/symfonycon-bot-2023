@@ -47,8 +47,8 @@ final readonly class Parser
                 return;
             }
 
-            $start = new \DateTimeImmutable($startsAt);
-            $end = new \DateTimeImmutable($endsAt);
+            $start = (new \DateTimeImmutable($startsAt))->setTimezone(new \DateTimeZone('Europe/Brussels'));
+            $end = (new \DateTimeImmutable($endsAt))->setTimezone(new \DateTimeZone('Europe/Brussels'));
 
             $timeSpan = new TimeSpan($start, $end);
             $slot = new Slot($timeSpan, $prevSlot);
