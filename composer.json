@@ -6,7 +6,7 @@
     "minimum-stability": "RC",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.3",
+        "php": ">=8.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "doctrine/doctrine-bundle": "^2.11",
