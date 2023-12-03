@@ -3,7 +3,6 @@
     "description": "Chatbot for SymfonyCon 2023 with Telegram integration",
     "type": "project",
     "license": "MIT",
-    "minimum-stability": "RC",
     "prefer-stable": true,
     "require": {
         "php": ">=8.2",
