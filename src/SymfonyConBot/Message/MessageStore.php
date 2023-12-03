@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\SymfonyConBot\Message;
 
-use App\SymfonyConBot\Exception\MessageBagNotFoundException;
 use Psr\Cache\CacheItemPoolInterface;
 
 final readonly class MessageStore

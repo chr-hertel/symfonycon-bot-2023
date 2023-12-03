@@ -14,6 +14,6 @@ final class User
 
     public function getFullName(): string
     {
-        return trim($this->firstName . ' ' . $this->lastName);
+        return trim($this->firstName.' '.$this->lastName);
     }
 }
