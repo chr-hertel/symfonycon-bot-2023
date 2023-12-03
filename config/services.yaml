@@ -22,6 +22,9 @@ services:
         $baseUrl: '%env(WEBHOOK_BASE_URL)%'
         $token: '%env(TELEGRAM_TOKEN)%'
 
+    App\SymfonyConBot\ToolBox\SerpApi\SerpApiFunction:
+        $apiKey: '%env(SERP_API_KEY)%'
+
     Probots\Pinecone\Client:
         $apiKey: '%env(PINECONE_API_KEY)%'
         $environment: '%env(PINECONE_ENVIRONMENT)%'
